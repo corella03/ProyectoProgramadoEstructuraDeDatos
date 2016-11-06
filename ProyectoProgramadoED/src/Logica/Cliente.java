@@ -62,5 +62,33 @@ public class Cliente {
     {
         this.tamañoNum = tamañoNum;
     }
-
+    public Object llenarFila ()
+    {
+        fila.add(prioridad = "A");
+        fila.add(prioridad = "B");
+        fila.add(prioridad = "C");
+        fila.add(prioridad = "D");
+        fila.add(prioridad = "E");
+        fila.add(prioridad = "F");
+        for (int i = 0; i < 25; i++) 
+        {
+            prioriRandom = (int) (Math.random()*6);
+            System.out.println(fila.get(prioriRandom));
+        }
+        return fila.get(prioriRandom);
+    
+    }
+    public Object Cola()
+    {
+        if (tamañoNum < 25)
+            {
+                prioriRandom = (int) (Math.random()*6);
+                System.out.println(fila.get(prioriRandom)/*+tamañoNum*/);
+                tamañoNum = tamañoNum +1;
+            }
+        Stack Cola = new Stack();
+        Cola.push(this.fila.get(prioriRandom)+tamañoNum);
+        System.out.println(Cola);
+        return Cola;
+    }
 }
