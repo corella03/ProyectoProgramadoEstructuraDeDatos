@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package Logica;
+
+import java.util.List;
+
 /**
  **
  ** @author Luis Alonso Corella Chaves
@@ -11,6 +14,11 @@ package Logica;
  ** @date 2016-10-31- Lunes
  **/
 public abstract class Tramites {
-    
-    public abstract String Logica ();
+    public int tiempoInicioAtenCli;
+    public Cliente cliente;
+    public int reloj;
+    public boolean libre = true;
+    public List <Cliente> atendidos;
+    public abstract void atender (Cliente cl);
+    public abstract int promedioAtencionCliente();
 }
