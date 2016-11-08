@@ -5,10 +5,17 @@
  */
 package Logica;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Jorge
  */
 public class Banco {
-    
+    int reloj = 0;
+    public int atendidos;
+    public int noAtendidos;
+    public List <Cliente> fila = new ArrayList <> ();
+    public List <Tramites> listaDeTramites = new ArrayList <> ();
 }
