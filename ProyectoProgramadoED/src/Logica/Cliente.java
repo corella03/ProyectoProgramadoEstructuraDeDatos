@@ -4,11 +4,6 @@
  * and open the template in the editor.
  */
 package Logica;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
-
 /**
  **
  ** @author Luis Alonso Corella Chaves
@@ -25,4 +20,37 @@ public class Cliente {
     {
         this.tickete = new Tickete (numero);//Para que al crear el clinete se le asigne un numero
     }
+
+    public int getTolerancia() {
+        return tolerancia;
+    }
+
+    public int getTiempoTrami() {
+        return tiempoTrami;
+    }
+
+    public Tickete getTickete() {
+        return tickete;
+    }
+
+    public boolean isAtendido() {
+        return atendido;
+    }
+
+    public void setTolerancia(int tolerancia) {
+        this.tolerancia = tolerancia;
+    }
+
+    public void setTiempoTrami(int tiempoTrami) {
+        this.tiempoTrami = tiempoTrami;
+    }
+
+    public void setTickete(Tickete tickete) {
+        this.tickete = tickete;
+    }
+
+    public void setAtendido(boolean atendido) {
+        this.atendido = atendido;
+    }
+    
 }

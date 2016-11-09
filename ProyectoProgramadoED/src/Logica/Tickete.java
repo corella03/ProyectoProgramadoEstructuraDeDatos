@@ -20,4 +20,20 @@ public class Tickete {
         this.tipo = prioridades[(int) (Math.random()*5)];
         this.numero = numero;
     }
+    public int getNumero() 
+    {
+        return numero;
+    }
+    public char getTipo() 
+    {
+        return tipo;
+    }
+    public void setNumero(int numero) 
+    {
+        this.numero = numero;
+    }
+    public void setTipo(char tipo) 
+    {
+        this.tipo = tipo;
+    }   
 }

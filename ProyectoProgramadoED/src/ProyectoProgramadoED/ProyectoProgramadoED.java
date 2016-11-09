@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+//Paquete
 package ProyectoProgramadoED;
 /**
  **
@@ -11,7 +12,6 @@ package ProyectoProgramadoED;
  ** @date 2016-10-31- Lunes
  **/
 public class ProyectoProgramadoED {
-
     /**
      * @param args the command line arguments
      */
@@ -19,6 +19,5 @@ public class ProyectoProgramadoED {
         // TODO code application logic here
         Menu m = new Menu();
         m.menu();
-    }
-    
+    }   
 }

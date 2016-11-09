@@ -35,4 +35,28 @@ public class Banco {
             listaDeTramites.add(new Plataforma());
         }
     }
+
+    public int getReloj() {
+        return reloj;
+    }
+
+    public int getAtendidos() {
+        return atendidos;
+    }
+
+    public int getNoAtendidos() {
+        return noAtendidos;
+    }
+
+    public void setReloj(int reloj) {
+        this.reloj = reloj;
+    }
+
+    public void setAtendidos(int atendidos) {
+        this.atendidos = atendidos;
+    }
+
+    public void setNoAtendidos(int noAtendidos) {
+        this.noAtendidos = noAtendidos;
+    }
 }

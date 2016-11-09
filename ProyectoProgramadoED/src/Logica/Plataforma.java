@@ -14,6 +14,7 @@ import java.util.ArrayList;
  ** @date 2016-10-21- Lunes
  **/
 public class Plataforma extends Tramites {
+    
     @Override
     public void atender(Cliente cl) 
     {
