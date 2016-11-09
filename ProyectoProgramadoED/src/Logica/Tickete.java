@@ -4,11 +4,12 @@
  * and open the template in the editor.
  */
 package Logica;
-
 /**
- *
- * @author Jorge
- */
+ **
+ ** @author Luis Alonso Corella Chaves
+ ** @author Jorge Esteban Rojas Ugalde
+ ** @date 2016-11-05- Sábado
+ **/
 public class Tickete {
     public int numero;
     public char tipo;

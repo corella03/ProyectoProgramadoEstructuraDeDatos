@@ -7,15 +7,32 @@ package Logica;
 
 import java.util.ArrayList;
 import java.util.List;
-
 /**
- *
- * @author Jorge
- */
+ **
+ ** @author Luis Alonso Corella Chaves
+ ** @author Jorge Esteban Rojas Ugalde
+ ** @date 2016-11-05- Sábado
+ **/
 public class Banco {
     int reloj = 0;
     public int atendidos;
     public int noAtendidos;
     public List <Cliente> fila = new ArrayList <> ();
     public List <Tramites> listaDeTramites = new ArrayList <> ();
+    
+    public Banco(int totalCli, int numeroCajas, int numeroPlataformas) 
+    {
+        for (int i = 0; i < totalCli; i++) 
+        {
+            fila.add(new Cliente(i));
+        }
+        for (int i = 0; i < numeroCajas; i++) 
+        {
+            listaDeTramites.add(new Cajas());
+        }
+        for (int i = 0; i < numeroPlataformas; i++) 
+        {
+            listaDeTramites.add(new Plataforma());
+        }
+    }
 }

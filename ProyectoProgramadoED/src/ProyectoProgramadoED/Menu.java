@@ -13,7 +13,7 @@ package ProyectoProgramadoED;
 public class Menu {
     public void menu()
     {
-        Logica.Cliente cl = new Logica.Cliente();
+       
 
     }
 }
