@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package Logica;
-
 import java.util.ArrayList;
 import java.util.List;
 /**
@@ -15,8 +14,8 @@ import java.util.List;
  **/
 public class Banco {
     int reloj = 0;
-    public int atendidos;
-    public int noAtendidos;
+    public int atendidos = 0;
+    public int noAtendidos = 0;
     public List <Cliente> fila = new ArrayList <> ();
     public List <Tramites> listaDeTramites = new ArrayList <> ();
     
@@ -58,5 +57,37 @@ public class Banco {
 
     public void setNoAtendidos(int noAtendidos) {
         this.noAtendidos = noAtendidos;
+    }
+    public Cliente priorizarCola (int tipo)//1 Caja - 2 Plataforma
+    {
+        List <Cliente> prioridadAlta = new ArrayList <> ();
+        List <Cliente> prioridadMedia = new ArrayList <> ();
+        List <Cliente> prioridadBaja = new ArrayList <> ();
+        List <Cliente> plataforma = new ArrayList <> ();
+        List <Cliente> otros = new ArrayList <> ();
+        for (int i = 0; i < fila.size(); i++) 
+        {
+            if(!fila.get(i).atendido){
+                switch (fila.get(i).tickete.tipo ) {
+                    case 'A' :
+                    case 'C':
+                        prioridadAlta.add(fila.get(i));
+                        break;
+                    case 'B':
+                        prioridadMedia.add(fila.get(i));
+                        break;
+                    case 'D':
+                        prioridadBaja.add(fila.get(i));
+                        break;
+                    case 'E':
+                        plataforma.add(fila.get(i));
+                        break;
+                    default:
+                        otros.add(fila.get(i));
+                        break;
+                }
+            }
+        }
+        return null;
     }
 }
