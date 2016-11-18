@@ -88,6 +88,55 @@ public class Banco {
                 }
             }
         }
+                if (tipo == 1)
+        {
+            if (prioridadAlta.size() > 0)
+            {
+                Cliente cl = prioridadAlta.get(0);// para obtener simepre el primero de la prioridad alta que encunetre
+                prioridadAlta.get(0).atendido = true ;
+                Cliente nuevo = new Cliente(fila.size()+1);
+                fila.add(nuevo);
+                return cl;
+                
+            }
+            
+            else if (prioridadMedia.size() > 0)
+            {
+                Cliente cl = prioridadMedia.get(0);
+                prioridadMedia.get(0).atendido = true ;
+                Cliente nuevo = new Cliente(fila.size()+1);
+                fila.add(nuevo);
+                return cl;
+            }
+            else if (prioridadBaja.size() > 0)
+            {
+                Cliente cl = prioridadBaja.get(0);
+                prioridadBaja.get(0).atendido = true ;
+                Cliente nuevo = new Cliente(fila.size()+1);
+                fila.add(nuevo);
+                return cl;
+            }
+            else if (otros.size() > 0)
+            {
+                Cliente cl = otros.get(0);
+                otros.get(0).atendido = true ;
+                Cliente nuevo = new Cliente(fila.size()+1);
+                fila.add(nuevo);
+                return cl;
+            }
+            return null;//Por si la lista llega a estar vacía
+        }
+        else
+        {
+            if (plataforma.size() > 0)
+            {
+                Cliente cl = plataforma.get(0);
+                plataforma.get(0).atendido = true ;
+                Cliente nuevo = new Cliente(fila.size()+1);
+                fila.add(nuevo);
+                return cl;
+            }
         return null;
     }
+}
 }
