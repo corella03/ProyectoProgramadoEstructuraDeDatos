@@ -4,19 +4,16 @@
  * and open the template in the editor.
  */
 package Logica;
-
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  **
  ** @author Luis Alonso Corella Chaves
  ** @author Jorge Esteban Rojas Ugalde
  ** @date 2016-11-05- Sábado
- *
- */
+ **
+ **/
 public class Banco {
-
     int reloj = 0;
     public int atendidos = 0;
     public int noAtendidos = 0;
@@ -164,6 +161,14 @@ public class Banco {
     }
 
     public void clienteSinTiempo(int minutActual) {
+        for (int i = 0; i < fila.size(); i++) {
+            if(fila.get(i).tolerancia == minutActual && !fila.get(i).atendido){
+                noAtendidos++;
+                fila.get(i).atendido = true;
+                Cliente nuevo = new Cliente(fila.size()+1);
+                fila.add(nuevo);
+            }
+        }
     }
 
 }
