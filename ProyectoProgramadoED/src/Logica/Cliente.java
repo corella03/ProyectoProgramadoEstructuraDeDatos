@@ -3,54 +3,89 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+//Paquete
 package Logica;
 /**
  **
  ** @author Luis Alonso Corella Chaves
  ** @author Jorge Esteban Rojas Ugalde
  ** @date 2016-10-21- Lunes
+ **
  **/
-public class Cliente {
-    public int tolerancia = (int) (Math.random()*45+3);
-    public int tiempoTrami = (int) (Math.random()*30+5);
+public class Cliente 
+{
+    //Variables de la Clase 
+    public int tolerancia = (int) (Math.random() * 45 + 3);//Tolerancia del cliente random
+    public int tiempoTrami = (int) (Math.random() * 30 + 5);//Tiempo en que dura el Tramite del cliente random
     public Tickete tickete;
     public boolean atendido = false;
-    
-    public Cliente (int numero)
+    //Constructor Vacío recibe como parámetro int numero
+    public Cliente(int numero) 
     {
-        this.tickete = new Tickete (numero);//Para que al crear el clinete se le asigne un numero
+        this.tickete = new Tickete(numero);//Para que al crear el cliente se le asigne un numero
     }
-
-    public int getTolerancia() {
+    /**
+     * Método get para variable tolerancia
+     * @return int tolerancia
+     */
+    public int getTolerancia() 
+    {
         return tolerancia;
     }
-
-    public int getTiempoTrami() {
+    /**
+     * Método get para variable tiempoTrami
+     * @return int tiempoTrami
+     */
+    public int getTiempoTrami() 
+    {
         return tiempoTrami;
     }
-
-    public Tickete getTickete() {
+    /**
+     * Método get para variable tickete
+     * @return Tickete tickete
+     */
+    public Tickete getTickete() 
+    {
         return tickete;
     }
-
-    public boolean isAtendido() {
+    /**
+     * Método is para variable atendido
+     * @return boolean atendido
+     */
+    public boolean isAtendido() 
+    {
         return atendido;
     }
-
-    public void setTolerancia(int tolerancia) {
+    /**
+     * Método set para variable tolerancia
+     * @param tolerancia
+     */
+    public void setTolerancia(int tolerancia) 
+    {
         this.tolerancia = tolerancia;
     }
-
-    public void setTiempoTrami(int tiempoTrami) {
+    /**
+     * Método set para variable tiempoTrami
+     * @param tiempoTrami
+     */
+    public void setTiempoTrami(int tiempoTrami) 
+    {
         this.tiempoTrami = tiempoTrami;
     }
-
-    public void setTickete(Tickete tickete) {
+    /**
+     * Método set para variable tickete
+     * @param tickete
+     */
+    public void setTickete(Tickete tickete) 
+    {
         this.tickete = tickete;
     }
-
-    public void setAtendido(boolean atendido) {
+    /**
+     * Método set para variable atendido
+     * @param atendido
+     */
+    public void setAtendido(boolean atendido)
+    {
         this.atendido = atendido;
     }
-    
-}
+}//Fin de la Clase Cliente
